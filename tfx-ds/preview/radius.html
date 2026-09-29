@@ -1,0 +1,20 @@
+<!-- @dsCard group="Spacing" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corner radius</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../ui_kits/tradeify-fx/components.css">
+<style>
+body{margin:0;padding:28px;background:var(--tfx-bg-page);color:var(--tfx-text-primary);font:var(--text-s-regular)}
+.h{font:var(--text-labels-overline);text-transform:uppercase;color:var(--tfx-text-muted);margin:0 0 14px;letter-spacing:.04em}
+.row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.col{display:flex;flex-direction:column;gap:16px}
+.stack{display:flex;flex-direction:column;gap:28px}
+.meta{font:var(--text-labels-meta);color:var(--tfx-text-muted)}
+.cap{font:var(--text-xs-regular);color:var(--tfx-text-secondary)}
+code{font:var(--text-labels-meta);color:var(--color-cyan-300)}
+.rd{display:flex;flex-direction:column;gap:4px;width:130px}.bx{width:96px;height:64px;background:var(--tfx-bg-surface);border:1px solid var(--tfx-border-strong)}.rd b{font:var(--text-xs-semibold)}.rd span{font:var(--text-xs-regular);color:var(--tfx-text-muted)}</style></head>
+<body class="tfx">
+<p class="h">Figma Numbers / Border Radius</p><div class="row"><div class="rd"><div class="bx" style="border-radius:var(--radius-0)"></div><b>0</b><code>--radius-0</code><span></span></div><div class="rd"><div class="bx" style="border-radius:var(--radius-4)"></div><b>4</b><code>--radius-4</code><span>tags</span></div><div class="rd"><div class="bx" style="border-radius:var(--radius-8)"></div><b>8</b><code>--radius-8</code><span>button face M, input 10*</span></div><div class="rd"><div class="bx" style="border-radius:var(--radius-12)"></div><b>12</b><code>--radius-12</code><span>button frame M, tab, review</span></div><div class="rd"><div class="bx" style="border-radius:var(--radius-16)"></div><b>16</b><code>--radius-16</code><span>cards, button frame L, tabs track</span></div><div class="rd"><div class="bx" style="border-radius:var(--radius-full)"></div><b>full</b><code>--radius-full</code><span>badge, switch, chips</span></div></div><p class="cap" style="margin-top:14px">* Input uses 10px and Button S 9.6/6.4px in Figma (unbound). Kept as component constants.</p>
+
+</body></html>

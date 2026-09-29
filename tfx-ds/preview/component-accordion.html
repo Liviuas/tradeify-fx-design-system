@@ -1,0 +1,23 @@
+<!-- @dsCard group="Components" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accordion</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../ui_kits/tradeify-fx/components.css">
+<style>
+body{margin:0;padding:28px;background:var(--tfx-bg-page);color:var(--tfx-text-primary);font:var(--text-s-regular)}
+.h{font:var(--text-labels-overline);text-transform:uppercase;color:var(--tfx-text-muted);margin:0 0 14px;letter-spacing:.04em}
+.row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.col{display:flex;flex-direction:column;gap:16px}
+.stack{display:flex;flex-direction:column;gap:28px}
+.meta{font:var(--text-labels-meta);color:var(--tfx-text-muted)}
+.cap{font:var(--text-xs-regular);color:var(--tfx-text-secondary)}
+code{font:var(--text-labels-meta);color:var(--color-cyan-300)}
+</style></head>
+<body class="tfx">
+<p class="h">Accordion · Open = Yes | No · FAQ column 874</p><div class="tfx-narrow"><div class="tfx-accordion">
+<div class="tfx-acc" data-open="true"><button class="tfx-acc__head" aria-expanded="true"><span class="tfx-acc__title">What is Tradeify FX?</span><span class="tfx-acc__glyph">[-]</span></button><p class="tfx-acc__body">A prop firm built specifically for forex traders. Real evaluation, real funding, and a path that ends in live capital allocation… not just another scaling plan.</p></div>
+<div class="tfx-acc" data-open="false"><button class="tfx-acc__head" aria-expanded="false"><span class="tfx-acc__title">Is this real capital or simulated capital?</span><span class="tfx-acc__glyph">[+]</span></button><p class="tfx-acc__body">Funded accounts are simulated until you qualify for the Live Program.</p></div>
+<div class="tfx-acc" data-open="false"><button class="tfx-acc__head" aria-expanded="false"><span class="tfx-acc__title">How do payouts work?</span><span class="tfx-acc__glyph">[+]</span></button><p class="tfx-acc__body">Daily, biweekly or on demand depending on your plan.</p></div></div></div>
+<script src="../ui_kits/tradeify-fx/components.js"></script>
+</body></html>

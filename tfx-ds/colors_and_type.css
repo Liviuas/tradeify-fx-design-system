@@ -1,0 +1,452 @@
+/* ==========================================================================
+   Tradeify FX — Design Tokens (colors_and_type.css)
+   Source of truth: Figma "Tradeify Forex - Web" (file R7nhAhk4dzg7ooooZ7iQlC)
+     • Variable collection "Colors"  — modes Dark (default) / Light — 101 vars
+     • Variable collection "Numbers" — Border Radius (6) + Spacing (9)
+     • 40 local text styles, 3 layout-grid styles
+   Layer 1 (--color-*, --radius-*, --space-*, --text-*) mirrors Figma 1:1.
+   Layer 2 (--tfx-*) is the semantic layer, inferred from how the product
+   screens use Layer 1. Components must consume Layer 2 where it exists.
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:wdth,wght@75..125,200..900&family=JetBrains+Mono:wght@200..800&display=swap');
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  /* ---- Layer 1 · Figma Colors (mode: Dark) ---- */
+  /* Brand */
+  --color-brand-black: #05090a;
+  --color-brand-dark-teal: #0e191d;
+  --color-brand-off-white: #e0eae9;
+  --color-brand-jet-stream: #bbcac7;
+  --color-brand-nitrogen: #00dfff;
+  --color-brand-arctic: #55b3c7;
+  /* Border */
+  --color-border-50: #bbcac71a;
+  --color-border-100: #bbcac71f;
+  --color-border-200: #bbcac729;
+  --color-border-300: #bbcac733;
+  --color-border-400: #bbcac76b;
+  --color-border-500: #bbcac7b8;
+  /* Gray */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #030712;
+  /* Zinc */
+  --color-zinc-50: #f4f4f5;
+  --color-zinc-100: #e4e4e7;
+  --color-zinc-200: #d4d4d8;
+  --color-zinc-300: #b7b7ba;
+  --color-zinc-400: #9a9aa3;
+  --color-zinc-500: #787882;
+  --color-zinc-600: #52525b;
+  --color-zinc-700: #303036;
+  --color-zinc-800: #242426;
+  --color-zinc-900: #17171a;
+  --color-zinc-950: #111114;
+  --color-zinc-1000: #08080a;
+  /* Red */
+  --color-red-50: #feeded;
+  --color-red-100: #fdc8c8;
+  --color-red-200: #fcadae;
+  --color-red-300: #fb8788;
+  --color-red-400: #fa7071;
+  --color-red-500: #f94c4e;
+  --color-red-600: #e34547;
+  --color-red-700: #b13637;
+  --color-red-800: #892a2b;
+  --color-red-900: #692021;
+  --color-red-950: #531b1b;
+  /* Yellow */
+  --color-yellow-50: #fefce8;
+  --color-yellow-100: #fef9c3;
+  --color-yellow-200: #fef08a;
+  --color-yellow-300: #fde047;
+  --color-yellow-400: #facc15;
+  --color-yellow-500: #eab308;
+  --color-yellow-600: #ca8a04;
+  --color-yellow-700: #a16207;
+  --color-yellow-800: #854d0e;
+  --color-yellow-900: #713f12;
+  --color-yellow-950: #422006;
+  /* Green */
+  --color-green-50: #eafbee;
+  --color-green-100: #bef3c9;
+  --color-green-200: #9eedaf;
+  --color-green-300: #72e48b;
+  --color-green-400: #57df75;
+  --color-green-500: #2dd752;
+  --color-green-600: #29c44b;
+  --color-green-700: #20993a;
+  --color-green-800: #19762d;
+  --color-green-900: #135a22;
+  --color-green-950: #17321d;
+  /* Cyan */
+  --color-cyan-50: #e5faff;
+  --color-cyan-100: #b7f2ff;
+  --color-cyan-200: #8aeaff;
+  --color-cyan-300: #5ce1ff;
+  --color-cyan-400: #2ed9ff;
+  --color-cyan-500: #00d1ff;
+  --color-cyan-600: #00b0d6;
+  --color-cyan-700: #008ead;
+  --color-cyan-800: #006d85;
+  --color-cyan-900: #004b5c;
+  --color-cyan-950: #083344;
+  /* Black */
+  --color-black: #000000;
+  /* White */
+  --color-white: #ffffff;
+  --color-white-50: #ffffff0a;
+  --color-white-100: #ffffff0f;
+  --color-white-200: #ffffff14;
+  --color-white-300: #ffffff29;
+  --color-white-400: #ffffff3d;
+  --color-white-500: #ffffff5c;
+  --color-white-600: #ffffff7a;
+  --color-white-700: #ffffffa3;
+  --color-white-800: #ffffffcc;
+  --color-white-900: #ffffffeb;
+  /* Black */
+  --color-black-50: #0000000a;
+  --color-black-100: #0000000f;
+  --color-black-200: #00000014;
+  --color-black-300: #00000029;
+  --color-black-400: #0000003d;
+  --color-black-500: #0000005c;
+  --color-black-600: #0000007a;
+  --color-black-700: #000000a3;
+  --color-black-800: #000000cc;
+  --color-black-900: #000000eb;
+
+  /* ---- Layer 1 · Figma Numbers ---- */
+  --radius-0: 0px;   /* Border Radius/0px */
+  --radius-4: 4px;   /* Border Radius/4px */
+  --radius-8: 8px;   /* Border Radius/8px */
+  --radius-12: 12px;   /* Border Radius/12px */
+  --radius-16: 16px;   /* Border Radius/16px */
+  --radius-full: 9999px;   /* Border Radius/9999px */
+  --space-0: 0px;   /* Spacing/0px */
+  --space-4: 4px;   /* Spacing/4px */
+  --space-8: 8px;   /* Spacing/8px */
+  --space-16: 16px;   /* Spacing/16px */
+  --space-20: 20px;   /* Spacing/20px */
+  --space-24: 24px;   /* Spacing/24px */
+  --space-32: 32px;   /* Spacing/32px */
+  --space-40: 40px;   /* Spacing/40px */
+  --space-48: 48px;   /* Spacing/48px */
+  /* Library spacing used by UI-kit components (linked Tailwind-style library,
+     collection "Padding": p-1,5 / p-3 / p-3,5 / p-7). Not in local Numbers. */
+  --space-6: 6px;  --space-12: 12px;  --space-14: 14px;  --space-28: 28px;
+  /* Layout values repeated across every product screen (inferred, see README §Layout) */
+  --space-60: 60px; --space-64: 64px; --space-92: 92px; --space-120: 120px;
+
+  /* ---- Typography families ---- */
+  --font-sans: "Mona Sans", "Mona Sans VF", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Mona Sans Display", "Mona Sans", "Mona Sans VF", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Mona Sans Mono", "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --stretch-normal: 100%;
+  --stretch-semi-expanded: 112.5%;   /* Figma "SemiExpanded" */
+  --stretch-expanded: 125%;          /* Figma "Expanded" */
+
+  /* ---- Layer 1 · Figma text styles (size / line-height / tracking) ---- */
+  --text-heading-desktop-h1: 600 56px/1 var(--font-display);  --text-heading-desktop-h1-stretch: 112.5%; --text-heading-desktop-h1-tracking: -0.01em;
+  --text-heading-desktop-h2: 600 48px/0.96 var(--font-display);  --text-heading-desktop-h2-stretch: 112.5%; --text-heading-desktop-h2-tracking: -0.01em;
+  --text-heading-desktop-h3: 600 40px/1 var(--font-display);  --text-heading-desktop-h3-stretch: 112.5%; --text-heading-desktop-h3-tracking: -0.01em;
+  --text-heading-desktop-h4: 600 32px/1.12 var(--font-display);  --text-heading-desktop-h4-stretch: 112.5%; --text-heading-desktop-h4-tracking: -0.01em;
+  --text-heading-desktop-h5: 600 24px/1.16 var(--font-display);  --text-heading-desktop-h5-stretch: 112.5%; --text-heading-desktop-h5-tracking: -0.01em;
+  --text-heading-desktop-h6: 600 20px/1.8 var(--font-display);  --text-heading-desktop-h6-stretch: 125%; --text-heading-desktop-h6-tracking: 0em;
+  --text-heading-mobile-h1: 600 32px/1 var(--font-display);  --text-heading-mobile-h1-stretch: 112.5%; --text-heading-mobile-h1-tracking: -0.02em;
+  --text-heading-mobile-h2: 600 30px/1.2 var(--font-display);  --text-heading-mobile-h2-stretch: 112.5%; --text-heading-mobile-h2-tracking: -0.01em;
+  --text-heading-mobile-h3: 600 28px/1.2 var(--font-display);  --text-heading-mobile-h3-stretch: 112.5%; --text-heading-mobile-h3-tracking: -0.01em;
+  --text-heading-mobile-h4: 600 24px/1.24 var(--font-display);  --text-heading-mobile-h4-stretch: 112.5%; --text-heading-mobile-h4-tracking: -0.01em;
+  --text-heading-mobile-h5: 600 20px/1.3 var(--font-display);  --text-heading-mobile-h5-stretch: 112.5%; --text-heading-mobile-h5-tracking: -0.01em;
+  --text-heading-mobile-h6: 600 16px/1.8 var(--font-display);  --text-heading-mobile-h6-stretch: 125%; --text-heading-mobile-h6-tracking: 0em;
+  --text-xl-regular: 400 20px/1.5 var(--font-sans);  --text-xl-regular-stretch: 100%; --text-xl-regular-tracking: 0em;
+  --text-xl-medium: 500 20px/1.5 var(--font-sans);  --text-xl-medium-stretch: 100%; --text-xl-medium-tracking: 0em;
+  --text-xl-semibold: 600 20px/1.5 var(--font-sans);  --text-xl-semibold-stretch: 100%; --text-xl-semibold-tracking: 0em;
+  --text-xl-bold: 700 20px/1.5 var(--font-sans);  --text-xl-bold-stretch: 100%; --text-xl-bold-tracking: 0em;
+  --text-l-regular: 400 18px/1.5 var(--font-sans);  --text-l-regular-stretch: 100%; --text-l-regular-tracking: 0em;
+  --text-l-medium: 500 18px/1.5 var(--font-sans);  --text-l-medium-stretch: 100%; --text-l-medium-tracking: 0em;
+  --text-l-semibold: 600 18px/1.5 var(--font-sans);  --text-l-semibold-stretch: 100%; --text-l-semibold-tracking: 0em;
+  --text-l-bold: 700 18px/1.5 var(--font-sans);  --text-l-bold-stretch: 100%; --text-l-bold-tracking: 0em;
+  --text-m-regular: 400 16px/1.4 var(--font-sans);  --text-m-regular-stretch: 100%; --text-m-regular-tracking: 0em;
+  --text-m-medium: 500 16px/1.4 var(--font-sans);  --text-m-medium-stretch: 100%; --text-m-medium-tracking: 0em;
+  --text-m-semibold: 600 16px/1.4 var(--font-sans);  --text-m-semibold-stretch: 100%; --text-m-semibold-tracking: 0em;
+  --text-m-bold: 700 16px/1.4 var(--font-sans);  --text-m-bold-stretch: 100%; --text-m-bold-tracking: 0em;
+  --text-s-regular: 400 14px/1.4 var(--font-sans);  --text-s-regular-stretch: 100%; --text-s-regular-tracking: 0em;
+  --text-s-medium: 500 14px/1.4 var(--font-sans);  --text-s-medium-stretch: 100%; --text-s-medium-tracking: 0em;
+  --text-s-semibold: 600 14px/1.4 var(--font-sans);  --text-s-semibold-stretch: 100%; --text-s-semibold-tracking: 0em;
+  --text-s-bold: 700 14px/1.4 var(--font-sans);  --text-s-bold-stretch: 100%; --text-s-bold-tracking: 0em;
+  --text-xs-regular: 400 12px/1.5 var(--font-sans);  --text-xs-regular-stretch: 100%; --text-xs-regular-tracking: 0em;
+  --text-xs-medium: 500 12px/1.5 var(--font-sans);  --text-xs-medium-stretch: 100%; --text-xs-medium-tracking: 0em;
+  --text-xs-semibold: 600 12px/1.5 var(--font-display);  --text-xs-semibold-stretch: 112.5%; --text-xs-semibold-tracking: 0em;
+  --text-xs-bold: 700 12px/1.5 var(--font-sans);  --text-xs-bold-stretch: 100%; --text-xs-bold-tracking: 0em;
+  --text-interactive-button-l: 600 18px/1.35 var(--font-display);  --text-interactive-button-l-stretch: 112.5%; --text-interactive-button-l-tracking: 0em;
+  --text-interactive-button-m: 600 16px/1.5 var(--font-display);  --text-interactive-button-m-stretch: 112.5%; --text-interactive-button-m-tracking: 0em;
+  --text-interactive-link-m: 400 14px/1.4 var(--font-mono);  --text-interactive-link-m-stretch: 100%; --text-interactive-link-m-tracking: 0em;
+  --text-interactive-link-s: 400 11px/1.45 var(--font-mono);  --text-interactive-link-s-stretch: 100%; --text-interactive-link-s-tracking: 0.05em;
+  --text-labels-meta: 500 12px/1.3 var(--font-mono);  --text-labels-meta-stretch: 100%; --text-labels-meta-tracking: 0em;
+  --text-labels-overline: 400 12px/1.5 var(--font-mono);  --text-labels-overline-stretch: 100%; --text-labels-overline-tracking: 0em;
+  --text-labels-input: 400 14px/1.4 var(--font-mono);  --text-labels-input-stretch: 100%; --text-labels-input-tracking: 0em;
+  --text-labels-caption: 700 12px/1.2 var(--font-mono);  --text-labels-caption-stretch: 100%; --text-labels-caption-tracking: 0em;
+
+  /* ---- Layer 2 · Semantic (inferred from product screens) ---- */
+  /* Surfaces */
+  --tfx-bg-page: var(--color-brand-black);            /* every page frame */
+  --tfx-bg-page-deep: var(--color-zinc-1000);         /* footer, mobile page bg */
+  --tfx-bg-surface: var(--color-brand-dark-teal);     /* promo, review, discord/support, active plan tab */
+  --tfx-bg-surface-subtle: var(--color-white-50);     /* step cards, pricing card body, secondary button face */
+  --tfx-bg-surface-raised: var(--color-white-100);    /* button frame, tabs track */
+  --tfx-bg-input: color-mix(in srgb, var(--color-brand-dark-teal) 60%, transparent); /* Figma: #0E191D @60% (unbound) */
+  --tfx-bg-overlay-chip: var(--color-white-200);      /* promo-code chip in Global Nav */
+  /* Text */
+  --tfx-text-strong: var(--color-white);              /* buttons, nav links, values */
+  --tfx-text-primary: var(--color-brand-off-white);   /* headings, accordion titles, body on cards */
+  --tfx-text-secondary: var(--color-brand-jet-stream);/* paragraphs, sub-copy */
+  --tfx-text-muted: var(--color-gray-400);            /* overlines, row labels */
+  --tfx-text-subtle: var(--color-gray-500);           /* footnotes */
+  --tfx-text-placeholder: color-mix(in srgb, var(--color-brand-jet-stream) 70%, transparent); /* Figma: #BBCAC7 @70% */
+  --tfx-text-on-light: var(--color-brand-black);      /* text on primary (light) fill */
+  --tfx-text-disabled: var(--color-zinc-600);
+  --tfx-text-accent: var(--color-brand-nitrogen);     /* highlighted words in headlines, prices, [+] */
+  /* Borders */
+  --tfx-border-subtle: var(--color-border-50);        /* cards */
+  --tfx-border-default: var(--color-border-200);      /* dividers, inactive plan tabs */
+  --tfx-border-strong: var(--color-border-400);       /* inputs */
+  --tfx-border-emphasis: var(--color-border-500);     /* active plan tab */
+  --tfx-border-control: var(--color-white-400);       /* button + tabs frames */
+  --tfx-border-control-hover: var(--color-white-600); /* outline button hover */
+  --tfx-border-control-disabled: var(--color-white-300);
+  --tfx-border-focus: var(--color-brand-nitrogen);    /* input typing state */
+  /* Status */
+  --tfx-positive: var(--color-green-500);             /* Data row Up */
+  --tfx-negative: var(--color-red-500);               /* Data row Down */
+  --tfx-success: var(--color-green-400);              /* Input success */
+  --tfx-error: var(--color-red-400);                  /* Input error */
+  --tfx-rating: var(--color-yellow-400);              /* review stars (inferred) */
+  /* Accent */
+  --tfx-accent: var(--color-brand-nitrogen);
+  --tfx-accent-soft: var(--color-brand-arctic);
+  --tfx-icon-bolt: #00b1d0;                           /* Bolt glyph fill — unbound in Figma (closest token Cyan/600 #00B0D6) */
+
+  /* ---- Component-level tokens (values Figma uses without a variable) ---- */
+  --tfx-primary-face: #f1fbff;                        /* Primary button + selected Tab face (unbound in Figma) */
+  --tfx-primary-face-hover: var(--color-brand-nitrogen);
+  --tfx-primary-face-disabled: rgba(241, 251, 255, 0.10);
+  --tfx-secondary-face-disabled: rgba(241, 251, 255, 0.03);
+  --tfx-badge-bg: rgba(126, 126, 126, 0.20);
+  --tfx-badge-stroke: linear-gradient(90deg, rgba(45, 212, 191, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
+  --tfx-chip-bg: rgba(131, 212, 230, 0.10);           /* trust chips under pricing */
+  --tfx-chip-text: #c7e5f5;                           /* library var Brand/Stone Blue */
+  --tfx-card-stroke-gradient: linear-gradient(180deg, #97a19a 0%, #58615a 100%); /* Discord / Support cards */
+  --tfx-nav-gradient: linear-gradient(90deg, #0a2930 0%, #034953 100%);
+  --tfx-nav-stroke: linear-gradient(90deg, #167489 0%, #00dfff 100%);
+  --tfx-waveform-line: #3b6065;
+
+  /* ---- Effects ---- */
+  --tfx-glow-primary: 0 0 24px 2px rgba(0, 223, 255, 0.55);      /* approximates blurred #00DFFF ellipse behind Primary */
+  --tfx-glow-soft: 0 0 12px rgba(0, 223, 255, 0.35);
+  --tfx-inner-glow-card: inset 0 0 17px rgba(42, 122, 255, 0.20); /* Discord / Support INNER_SHADOW */
+  --tfx-shadow-chip: 0 0 11px rgba(131, 212, 230, 0.10);          /* "New" pill drop shadow */
+  --tfx-glass-blur: blur(3px);                                    /* Figma GLASS effect on badges/chips */
+  --tfx-nav-blur: blur(19px);                                     /* mobile Nav bar BACKGROUND_BLUR */
+
+  /* ---- Layout ---- */
+  --tfx-page-max: 1920px;
+  --tfx-content-max: 1396px;          /* 1920 − 2×262 */
+  --tfx-content-narrow: 874px;        /* FAQ / accordion column */
+  --tfx-gutter: 262px;                /* desktop side padding at 1920 */
+  --tfx-gutter-mobile: 16px;
+  --tfx-section-pad-y: 92px;
+  --tfx-section-pad-y-mobile: 32px;
+  --tfx-grid-cols: 12; --tfx-grid-gap: 20px;       /* Descktop-1440 grid: 12 col, 20 gutter */
+  --tfx-grid-cols-mobile: 4; --tfx-grid-gap-mobile: 16px;
+  --tfx-bp-mobile: 767px;             /* Figma mobile frames are 402 wide; switch below 768 */
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  /* Figma Colors · mode Light. No product screen uses Light yet — see README. */
+  /* Brand */
+  --color-brand-black: #fafcfc;
+  --color-brand-dark-teal: #f1f6f7;
+  --color-brand-off-white: #0b1a1f;
+  --color-brand-jet-stream: #5c6e73;
+  --color-brand-nitrogen: #0c84a0;
+  --color-brand-arctic: #0090ad;
+  /* Border */
+  --color-border-50: #0e191d1a;
+  --color-border-100: #0e191d1f;
+  --color-border-200: #0e191d29;
+  --color-border-300: #0e191d33;
+  --color-border-400: #0e191d6b;
+  --color-border-500: #0e191db8;
+  /* Gray */
+  --color-gray-50: #030712;
+  --color-gray-100: #111827;
+  --color-gray-200: #1f2937;
+  --color-gray-300: #374151;
+  --color-gray-400: #4b5563;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #9ca3af;
+  --color-gray-700: #d1d5db;
+  --color-gray-800: #e5e7eb;
+  --color-gray-900: #f3f4f6;
+  --color-gray-950: #f9fafb;
+  /* Zinc */
+  --color-zinc-50: #08080a;
+  --color-zinc-100: #111114;
+  --color-zinc-200: #17171a;
+  --color-zinc-300: #242426;
+  --color-zinc-400: #303036;
+  --color-zinc-500: #52525b;
+  --color-zinc-600: #787882;
+  --color-zinc-700: #9a9aa3;
+  --color-zinc-800: #b7b7ba;
+  --color-zinc-900: #d4d4d8;
+  --color-zinc-950: #e4e4e7;
+  --color-zinc-1000: #f4f4f5;
+  /* Red */
+  --color-red-50: #531b1b;
+  --color-red-100: #692021;
+  --color-red-200: #892a2b;
+  --color-red-300: #b13637;
+  --color-red-400: #e34547;
+  --color-red-500: #e34547;
+  --color-red-600: #fa7071;
+  --color-red-700: #fb8788;
+  --color-red-800: #fcadae;
+  --color-red-900: #fdc8c8;
+  --color-red-950: #f0cbcb;
+  /* Yellow */
+  --color-yellow-50: #422006;
+  --color-yellow-100: #713f12;
+  --color-yellow-200: #854d0e;
+  --color-yellow-300: #a16207;
+  --color-yellow-400: #ca8a04;
+  --color-yellow-500: #ca8a04;
+  --color-yellow-600: #facc15;
+  --color-yellow-700: #fde047;
+  --color-yellow-800: #fef08a;
+  --color-yellow-900: #fef9c3;
+  --color-yellow-950: #fefce8;
+  /* Green */
+  --color-green-50: #17321d;
+  --color-green-100: #135a22;
+  --color-green-200: #19762d;
+  --color-green-300: #20993a;
+  --color-green-400: #29c44b;
+  --color-green-500: #26bc47;
+  --color-green-600: #57df75;
+  --color-green-700: #72e48b;
+  --color-green-800: #9eedaf;
+  --color-green-900: #bef3c9;
+  --color-green-950: #eafbee;
+  /* Cyan */
+  --color-cyan-50: #083344;
+  --color-cyan-100: #004b5c;
+  --color-cyan-200: #006d85;
+  --color-cyan-300: #008ead;
+  --color-cyan-400: #00b0d6;
+  --color-cyan-500: #00d1ff;
+  --color-cyan-600: #2ed9ff;
+  --color-cyan-700: #5ce1ff;
+  --color-cyan-800: #8aeaff;
+  --color-cyan-900: #b7f2ff;
+  --color-cyan-950: #e5faff;
+  /* Black */
+  --color-black: #ffffff;
+  /* White */
+  --color-white: #000000;
+  --color-white-50: #0000000a;
+  --color-white-100: #0000000f;
+  --color-white-200: #00000014;
+  --color-white-300: #00000029;
+  --color-white-400: #0000003d;
+  --color-white-500: #0000005c;
+  --color-white-600: #0000007a;
+  --color-white-700: #000000a3;
+  --color-white-800: #000000cc;
+  --color-white-900: #000000eb;
+  /* Black */
+  --color-black-50: #ffffff0a;
+  --color-black-100: #ffffff0f;
+  --color-black-200: #ffffff14;
+  --color-black-300: #ffffff29;
+  --color-black-400: #ffffff3d;
+  --color-black-500: #ffffff5c;
+  --color-black-600: #ffffff7a;
+  --color-black-700: #ffffffa3;
+  --color-black-800: #ffffffcc;
+  --color-black-900: #ffffffeb;
+}
+
+/* ---- Text-style classes (one per Figma text style) ---- */
+.t-heading-desktop-h1 { font: var(--text-heading-desktop-h1); font-stretch: var(--text-heading-desktop-h1-stretch); letter-spacing: var(--text-heading-desktop-h1-tracking); }  /* Heading/Desktop/H1 · Mona Sans Display SemiExpanded SemiBold */
+.t-heading-desktop-h2 { font: var(--text-heading-desktop-h2); font-stretch: var(--text-heading-desktop-h2-stretch); letter-spacing: var(--text-heading-desktop-h2-tracking); }  /* Heading/Desktop/H2 · Mona Sans SemiExpanded SemiBold */
+.t-heading-desktop-h3 { font: var(--text-heading-desktop-h3); font-stretch: var(--text-heading-desktop-h3-stretch); letter-spacing: var(--text-heading-desktop-h3-tracking); }  /* Heading/Desktop/H3 · Mona Sans SemiExpanded SemiBold */
+.t-heading-desktop-h4 { font: var(--text-heading-desktop-h4); font-stretch: var(--text-heading-desktop-h4-stretch); letter-spacing: var(--text-heading-desktop-h4-tracking); }  /* Heading/Desktop/H4 · Mona Sans SemiExpanded SemiBold */
+.t-heading-desktop-h5 { font: var(--text-heading-desktop-h5); font-stretch: var(--text-heading-desktop-h5-stretch); letter-spacing: var(--text-heading-desktop-h5-tracking); }  /* Heading/Desktop/H5 · Mona Sans SemiExpanded SemiBold */
+.t-heading-desktop-h6 { font: var(--text-heading-desktop-h6); font-stretch: var(--text-heading-desktop-h6-stretch); letter-spacing: var(--text-heading-desktop-h6-tracking); }  /* Heading/Desktop/H6 · Mona Sans Display Expanded SemiBold */
+.t-heading-mobile-h1 { font: var(--text-heading-mobile-h1); font-stretch: var(--text-heading-mobile-h1-stretch); letter-spacing: var(--text-heading-mobile-h1-tracking); }  /* Heading/Mobile/H1 · Mona Sans SemiExpanded SemiBold */
+.t-heading-mobile-h2 { font: var(--text-heading-mobile-h2); font-stretch: var(--text-heading-mobile-h2-stretch); letter-spacing: var(--text-heading-mobile-h2-tracking); }  /* Heading/Mobile/H2 · Mona Sans SemiExpanded SemiBold */
+.t-heading-mobile-h3 { font: var(--text-heading-mobile-h3); font-stretch: var(--text-heading-mobile-h3-stretch); letter-spacing: var(--text-heading-mobile-h3-tracking); }  /* Heading/Mobile/H3 · Mona Sans SemiExpanded SemiBold */
+.t-heading-mobile-h4 { font: var(--text-heading-mobile-h4); font-stretch: var(--text-heading-mobile-h4-stretch); letter-spacing: var(--text-heading-mobile-h4-tracking); }  /* Heading/Mobile/H4 · Mona Sans SemiExpanded SemiBold */
+.t-heading-mobile-h5 { font: var(--text-heading-mobile-h5); font-stretch: var(--text-heading-mobile-h5-stretch); letter-spacing: var(--text-heading-mobile-h5-tracking); }  /* Heading/Mobile/H5 · Mona Sans SemiExpanded SemiBold */
+.t-heading-mobile-h6 { font: var(--text-heading-mobile-h6); font-stretch: var(--text-heading-mobile-h6-stretch); letter-spacing: var(--text-heading-mobile-h6-tracking); }  /* Heading/Mobile/H6 · Mona Sans Display Expanded SemiBold */
+.t-xl-regular { font: var(--text-xl-regular); font-stretch: var(--text-xl-regular-stretch); letter-spacing: var(--text-xl-regular-tracking); }  /* XL/Regular · Mona Sans Regular */
+.t-xl-medium { font: var(--text-xl-medium); font-stretch: var(--text-xl-medium-stretch); letter-spacing: var(--text-xl-medium-tracking); }  /* XL/Medium · Mona Sans Medium */
+.t-xl-semibold { font: var(--text-xl-semibold); font-stretch: var(--text-xl-semibold-stretch); letter-spacing: var(--text-xl-semibold-tracking); }  /* XL/SemiBold · Mona Sans SemiBold */
+.t-xl-bold { font: var(--text-xl-bold); font-stretch: var(--text-xl-bold-stretch); letter-spacing: var(--text-xl-bold-tracking); }  /* XL/Bold · Mona Sans Bold */
+.t-l-regular { font: var(--text-l-regular); font-stretch: var(--text-l-regular-stretch); letter-spacing: var(--text-l-regular-tracking); }  /* L/Regular · Mona Sans Regular */
+.t-l-medium { font: var(--text-l-medium); font-stretch: var(--text-l-medium-stretch); letter-spacing: var(--text-l-medium-tracking); }  /* L/Medium · Mona Sans Medium */
+.t-l-semibold { font: var(--text-l-semibold); font-stretch: var(--text-l-semibold-stretch); letter-spacing: var(--text-l-semibold-tracking); }  /* L/SemiBold · Mona Sans SemiBold */
+.t-l-bold { font: var(--text-l-bold); font-stretch: var(--text-l-bold-stretch); letter-spacing: var(--text-l-bold-tracking); }  /* L/Bold · Mona Sans Bold */
+.t-m-regular { font: var(--text-m-regular); font-stretch: var(--text-m-regular-stretch); letter-spacing: var(--text-m-regular-tracking); }  /* M/Regular · Mona Sans Regular */
+.t-m-medium { font: var(--text-m-medium); font-stretch: var(--text-m-medium-stretch); letter-spacing: var(--text-m-medium-tracking); }  /* M/Medium · Mona Sans Medium */
+.t-m-semibold { font: var(--text-m-semibold); font-stretch: var(--text-m-semibold-stretch); letter-spacing: var(--text-m-semibold-tracking); }  /* M/SemiBold · Mona Sans SemiBold */
+.t-m-bold { font: var(--text-m-bold); font-stretch: var(--text-m-bold-stretch); letter-spacing: var(--text-m-bold-tracking); }  /* M/Bold · Mona Sans Bold */
+.t-s-regular { font: var(--text-s-regular); font-stretch: var(--text-s-regular-stretch); letter-spacing: var(--text-s-regular-tracking); }  /* S/Regular · Mona Sans Regular */
+.t-s-medium { font: var(--text-s-medium); font-stretch: var(--text-s-medium-stretch); letter-spacing: var(--text-s-medium-tracking); }  /* S/Medium · Mona Sans Medium */
+.t-s-semibold { font: var(--text-s-semibold); font-stretch: var(--text-s-semibold-stretch); letter-spacing: var(--text-s-semibold-tracking); }  /* S/SemiBold · Mona Sans SemiBold */
+.t-s-bold { font: var(--text-s-bold); font-stretch: var(--text-s-bold-stretch); letter-spacing: var(--text-s-bold-tracking); }  /* S/Bold · Mona Sans Bold */
+.t-xs-regular { font: var(--text-xs-regular); font-stretch: var(--text-xs-regular-stretch); letter-spacing: var(--text-xs-regular-tracking); }  /* XS/Regular · Mona Sans Regular */
+.t-xs-medium { font: var(--text-xs-medium); font-stretch: var(--text-xs-medium-stretch); letter-spacing: var(--text-xs-medium-tracking); }  /* XS/Medium · Mona Sans Medium */
+.t-xs-semibold { font: var(--text-xs-semibold); font-stretch: var(--text-xs-semibold-stretch); letter-spacing: var(--text-xs-semibold-tracking); }  /* XS/SemiBold · Mona Sans Display SemiExpanded SemiBold */
+.t-xs-bold { font: var(--text-xs-bold); font-stretch: var(--text-xs-bold-stretch); letter-spacing: var(--text-xs-bold-tracking); }  /* XS/Bold · Mona Sans Bold */
+.t-interactive-button-l { font: var(--text-interactive-button-l); font-stretch: var(--text-interactive-button-l-stretch); letter-spacing: var(--text-interactive-button-l-tracking); }  /* Interactive/Button L · Mona Sans Display SemiExpanded SemiBold */
+.t-interactive-button-m { font: var(--text-interactive-button-m); font-stretch: var(--text-interactive-button-m-stretch); letter-spacing: var(--text-interactive-button-m-tracking); }  /* Interactive/Button M · Mona Sans Display SemiExpanded SemiBold */
+.t-interactive-link-m { font: var(--text-interactive-link-m); font-stretch: var(--text-interactive-link-m-stretch); letter-spacing: var(--text-interactive-link-m-tracking); }  /* Interactive/Link M · Mona Sans Mono Regular (used UPPERCASE) */
+.t-interactive-link-s { font: var(--text-interactive-link-s); font-stretch: var(--text-interactive-link-s-stretch); letter-spacing: var(--text-interactive-link-s-tracking); }  /* Interactive/Link S · Mona Sans Mono Regular */
+.t-labels-meta { font: var(--text-labels-meta); font-stretch: var(--text-labels-meta-stretch); letter-spacing: var(--text-labels-meta-tracking); }  /* Labels/Meta · Mona Sans Mono Medium (used UPPERCASE) */
+.t-labels-overline { font: var(--text-labels-overline); font-stretch: var(--text-labels-overline-stretch); letter-spacing: var(--text-labels-overline-tracking); }  /* Labels/Overline · Mona Sans Mono Regular (used UPPERCASE) */
+.t-labels-input { font: var(--text-labels-input); font-stretch: var(--text-labels-input-stretch); letter-spacing: var(--text-labels-input-tracking); }  /* Labels/Input · Mona Sans Mono Regular */
+.t-labels-caption { font: var(--text-labels-caption); font-stretch: var(--text-labels-caption-stretch); letter-spacing: var(--text-labels-caption-tracking); }  /* Labels/Caption · Mona Sans Mono Bold */
+
+/* Responsive heading aliases — Desktop styles ≥768px, Mobile styles below (Figma breakpoints) */
+.t-h1 { font: var(--text-heading-desktop-h1); font-stretch: 112.5%; letter-spacing: -0.01em; }
+.t-h2 { font: var(--text-heading-desktop-h2); font-stretch: 112.5%; letter-spacing: -0.01em; }
+.t-h3 { font: var(--text-heading-desktop-h3); font-stretch: 112.5%; letter-spacing: -0.01em; }
+.t-h4 { font: var(--text-heading-desktop-h4); font-stretch: 112.5%; letter-spacing: -0.01em; }
+.t-h5 { font: var(--text-heading-desktop-h5); font-stretch: 112.5%; letter-spacing: -0.01em; }
+.t-h6 { font: var(--text-heading-desktop-h6); font-stretch: 125%; letter-spacing: 0; }
+@media (max-width: 767px) {
+  .t-h1 { font: var(--text-heading-mobile-h1); font-stretch: 112.5%; letter-spacing: -0.02em; }
+  .t-h2 { font: var(--text-heading-mobile-h2); font-stretch: 112.5%; }
+  .t-h3 { font: var(--text-heading-mobile-h3); font-stretch: 112.5%; }
+  .t-h4 { font: var(--text-heading-mobile-h4); font-stretch: 112.5%; }
+  .t-h5 { font: var(--text-heading-mobile-h5); font-stretch: 112.5%; }
+  .t-h6 { font: var(--text-heading-mobile-h6); font-stretch: 125%; }
+}
+.t-upper { text-transform: uppercase; }
+.t-accent { color: var(--tfx-text-accent); }
+.t-num { font-feature-settings: "lnum" 1, "tnum" 1; }

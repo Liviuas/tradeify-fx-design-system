@@ -1,0 +1,21 @@
+<!-- @dsCard group="Components" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tabs</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../ui_kits/tradeify-fx/components.css">
+<style>
+body{margin:0;padding:28px;background:var(--tfx-bg-page);color:var(--tfx-text-primary);font:var(--text-s-regular)}
+.h{font:var(--text-labels-overline);text-transform:uppercase;color:var(--tfx-text-muted);margin:0 0 14px;letter-spacing:.04em}
+.row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.col{display:flex;flex-direction:column;gap:16px}
+.stack{display:flex;flex-direction:column;gap:28px}
+.meta{font:var(--text-labels-meta);color:var(--tfx-text-muted)}
+.cap{font:var(--text-xs-regular);color:var(--tfx-text-secondary)}
+code{font:var(--text-labels-meta);color:var(--color-cyan-300)}
+</style></head>
+<body class="tfx">
+<p class="h">Tabs track + Tab (Select = Yes | No)</p>
+<div class="tfx-tabs" role="tablist"><button class="tfx-tab" role="tab" aria-selected="true">Daily<i class="tfx-bolt" aria-hidden="true"></i></button><button class="tfx-tab" role="tab" aria-selected="false">Classic<i class="tfx-bolt" aria-hidden="true"></i></button><button class="tfx-tab" role="tab" aria-selected="false">Direct<i class="tfx-bolt" aria-hidden="true"></i></button><button class="tfx-tab" role="tab" aria-selected="false">Funded<i class="tfx-bolt" aria-hidden="true"></i></button></div>
+<script src="../ui_kits/tradeify-fx/components.js"></script>
+</body></html>

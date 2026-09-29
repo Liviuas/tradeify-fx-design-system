@@ -1,0 +1,30 @@
+<!-- @dsCard group="Spacing" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layout & breakpoints</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../ui_kits/tradeify-fx/components.css">
+<style>
+body{margin:0;padding:28px;background:var(--tfx-bg-page);color:var(--tfx-text-primary);font:var(--text-s-regular)}
+.h{font:var(--text-labels-overline);text-transform:uppercase;color:var(--tfx-text-muted);margin:0 0 14px;letter-spacing:.04em}
+.row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.col{display:flex;flex-direction:column;gap:16px}
+.stack{display:flex;flex-direction:column;gap:28px}
+.meta{font:var(--text-labels-meta);color:var(--tfx-text-muted)}
+.cap{font:var(--text-xs-regular);color:var(--tfx-text-secondary)}
+code{font:var(--text-labels-meta);color:var(--color-cyan-300)}
+.lay{display:flex;flex-direction:column;gap:6px}.band{padding:10px 14px;border-radius:8px;background:var(--tfx-bg-surface);font:var(--text-labels-meta);color:var(--tfx-text-secondary)}
+.band.nav{background:var(--tfx-nav-gradient)}.band.wave{background:repeating-linear-gradient(90deg,#3b6065 0 1px,transparent 1px 4px);color:var(--tfx-text-strong)}
+.sec{display:flex;gap:6px;padding:6px;background:transparent;border:1px dashed var(--tfx-border-strong)}.sec .g{width:60px;display:grid;place-items:center;background:var(--color-white-50);border-radius:6px}.sec .c{flex:1;padding:18px;border-radius:6px;background:var(--tfx-bg-surface)}
+.bp{flex:1 1 200px;display:flex;flex-direction:column;gap:4px;padding:14px;border:1px solid var(--tfx-border-default);border-radius:12px}.bp b{font:var(--text-s-semibold);color:var(--tfx-text-strong)}.bp span{font:var(--text-xs-regular);color:var(--tfx-text-secondary)}</style></head>
+<body class="tfx">
+<p class="h">Page anatomy (all 3 reference screens)</p>
+<div class="lay"><div class="band nav">Global Nav · 60 (mobile 45)</div><div class="band">Nav bar · 60, inside hero, top 32</div>
+<div class="band sec"><span class="g">262</span><div class="c">content 1396 · section padding 92 top/bottom · header→content gap 48–64</div><span class="g">262</span></div>
+<div class="band wave">Graphics waveform divider between sections</div><div class="band sec"><span class="g">262</span><div class="c">3 × 452 cards · gap 20 &nbsp;|&nbsp; 4 × 337 price cards · gap 16</div><span class="g">262</span></div><div class="band nav">Footer · Zinc/1000 · padding 128/40</div></div>
+<div class="row" style="margin-top:22px;align-items:flex-start">
+<div class="bp"><b>Desktop</b><span>Frame 1920 · grid 12 col / 20 gutter (1440 style: margin 120)</span></div>
+<div class="bp"><b>Mobile</b><span>Frame 402 · 4 col / 16 gutter / 16 margin · section padding 32–64 · stacks to 1 col, gap 24–32</span></div>
+<div class="bp"><b>Switch</b><span>&lt;768px → Mobile variants (Heading/Mobile, Nav bar Mobile, Accordion Mobile, Footer Mobile)</span></div></div>
+
+</body></html>

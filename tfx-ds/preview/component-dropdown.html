@@ -1,0 +1,22 @@
+<!-- @dsCard group="Components" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dropdown</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../ui_kits/tradeify-fx/components.css">
+<style>
+body{margin:0;padding:28px;background:var(--tfx-bg-page);color:var(--tfx-text-primary);font:var(--text-s-regular)}
+.h{font:var(--text-labels-overline);text-transform:uppercase;color:var(--tfx-text-muted);margin:0 0 14px;letter-spacing:.04em}
+.row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.col{display:flex;flex-direction:column;gap:16px}
+.stack{display:flex;flex-direction:column;gap:28px}
+.meta{font:var(--text-labels-meta);color:var(--tfx-text-muted)}
+.cap{font:var(--text-xs-regular);color:var(--tfx-text-secondary)}
+code{font:var(--text-labels-meta);color:var(--color-cyan-300)}
+</style></head>
+<body class="tfx">
+<p class="h">Dropdown · Open = No | Yes</p><div class="row" style="align-items:flex-start;gap:32px">
+<div class="tfx-dropdown" data-open="false"><button class="tfx-dropdown__trigger" aria-expanded="false"><span><span class="tfx-dropdown__label">Sort by Newest</span><svg class="tfx-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9L12 15L18 9"/></svg></span></button><ul class="tfx-dropdown__menu" role="listbox"><li role="option" aria-selected="true">Sort by Newest</li><li role="option">Sort by Oldest</li></ul></div>
+<div class="tfx-dropdown" data-open="true"><button class="tfx-dropdown__trigger" aria-expanded="true"><span><span class="tfx-dropdown__label">Sort by Newest</span><svg class="tfx-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9L12 15L18 9"/></svg></span></button><ul class="tfx-dropdown__menu" role="listbox"><li role="option" aria-selected="true">Sort by Newest</li><li role="option">Sort by Oldest</li></ul></div></div>
+<script src="../ui_kits/tradeify-fx/components.js"></script>
+</body></html>

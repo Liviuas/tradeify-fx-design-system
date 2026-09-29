@@ -1,0 +1,22 @@
+<!-- @dsCard group="Components" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nav bar</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../ui_kits/tradeify-fx/components.css">
+<style>
+body{margin:0;padding:28px;background:var(--tfx-bg-page);color:var(--tfx-text-primary);font:var(--text-s-regular)}
+.h{font:var(--text-labels-overline);text-transform:uppercase;color:var(--tfx-text-muted);margin:0 0 14px;letter-spacing:.04em}
+.row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.col{display:flex;flex-direction:column;gap:16px}
+.stack{display:flex;flex-direction:column;gap:28px}
+.meta{font:var(--text-labels-meta);color:var(--tfx-text-muted)}
+.cap{font:var(--text-xs-regular);color:var(--tfx-text-secondary)}
+code{font:var(--text-labels-meta);color:var(--color-cyan-300)}
+.navwrap{padding:18px 24px;border-radius:16px;background:radial-gradient(60% 120% at 100% 0,rgba(0,109,133,.5),transparent),var(--tfx-bg-page)}@media(max-width:767px){body{padding:16px 0}.h{padding-inline:16px}.navwrap{padding:0;border-radius:0}}</style></head>
+<body class="tfx">
+<p class="h">Nav bar · Desktop (collapses to Mobile: logo · log-in icon · Primary S · menu)</p><div class="navwrap"><nav class="tfx-navbar"><a class="tfx-navbar__logo" href="#"><img src="../assets/logo-tradeify-fx.svg" alt="tradeify fx"></a>
+<div class="tfx-navbar__links"><a href="#">How it works</a><a href="#">Plans</a><a href="#">Rules</a><a href="#">About us</a><a href="#">FAQ</a></div>
+<div class="tfx-navbar__actions"><a class="tfx-navbar__login" href="#">Login</a><button class="tfx-navbar__icon-btn" aria-label="Log in"><svg class="tfx-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 7L15 12L10 17M15 12H3M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15"/></svg></button><button class="tfx-btn" data-hierarchy="primary" data-size="l"><span class="tfx-btn__face">Explore Plans<i class="tfx-bolt" aria-hidden="true"></i></span></button><button class="tfx-navbar__icon-btn" aria-label="Menu"><svg class="tfx-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5H20M4 12H20M4 19H20"/></svg></button></div></nav></div>
+
+</body></html>

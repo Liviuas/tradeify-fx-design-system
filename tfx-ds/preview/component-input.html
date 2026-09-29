@@ -1,0 +1,20 @@
+<!-- @dsCard group="Components" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Input</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../ui_kits/tradeify-fx/components.css">
+<style>
+body{margin:0;padding:28px;background:var(--tfx-bg-page);color:var(--tfx-text-primary);font:var(--text-s-regular)}
+.h{font:var(--text-labels-overline);text-transform:uppercase;color:var(--tfx-text-muted);margin:0 0 14px;letter-spacing:.04em}
+.row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.col{display:flex;flex-direction:column;gap:16px}
+.stack{display:flex;flex-direction:column;gap:28px}
+.meta{font:var(--text-labels-meta);color:var(--tfx-text-muted)}
+.cap{font:var(--text-xs-regular);color:var(--tfx-text-secondary)}
+code{font:var(--text-labels-meta);color:var(--color-cyan-300)}
+.ig{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}</style></head>
+<body class="tfx">
+<p class="h">Input · State × Size (L 60 · M 48) · Labels/Input mono text</p><div class="ig"><div class="col"><span class="meta">default</span><div class="tfx-field" data-state="default" data-size="l"><div class="tfx-input"><input type="text" placeholder="Email address" aria-label="Email address"></div></div><div class="tfx-field" data-state="default" data-size="m"><div class="tfx-input"><input type="text" placeholder="Email address" aria-label="Email address"></div></div></div><div class="col"><span class="meta">typing</span><div class="tfx-field" data-state="typing" data-size="l"><div class="tfx-input"><input type="text" placeholder="Email address" value="trader@" aria-label="Email address"></div></div><div class="tfx-field" data-state="typing" data-size="m"><div class="tfx-input"><input type="text" placeholder="Email address" value="trader@" aria-label="Email address"></div></div></div><div class="col"><span class="meta">filled</span><div class="tfx-field" data-state="filled" data-size="l"><div class="tfx-input"><input type="text" placeholder="Email address" value="trader@tradeify.co" aria-label="Email address"></div></div><div class="tfx-field" data-state="filled" data-size="m"><div class="tfx-input"><input type="text" placeholder="Email address" value="trader@tradeify.co" aria-label="Email address"></div></div></div><div class="col"><span class="meta">success</span><div class="tfx-field" data-state="success" data-size="l"><div class="tfx-input"><input type="text" placeholder="Email address" value="trader@tradeify.co" aria-label="Email address"></div><span class=tfx-field__help>Success text</span></div><div class="tfx-field" data-state="success" data-size="m"><div class="tfx-input"><input type="text" placeholder="Email address" value="trader@tradeify.co" aria-label="Email address"></div><span class=tfx-field__help>Success text</span></div></div><div class="col"><span class="meta">error</span><div class="tfx-field" data-state="error" data-size="l"><div class="tfx-input"><input type="text" placeholder="Email address" value="trader@" aria-label="Email address"></div><span class=tfx-field__help>Enter a valid email</span></div><div class="tfx-field" data-state="error" data-size="m"><div class="tfx-input"><input type="text" placeholder="Email address" value="trader@" aria-label="Email address"></div><span class=tfx-field__help>Enter a valid email</span></div></div></div><p class="h" style="margin-top:22px">With label (Label = true)</p><div class="tfx-field"><label class="tfx-field__label" for="e1">Email</label><div class="tfx-input"><input id="e1" placeholder="you@email.com"></div></div>
+
+</body></html>

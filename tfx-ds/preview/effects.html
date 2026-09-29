@@ -1,0 +1,27 @@
+<!-- @dsCard group="Spacing" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Borders, glows & glass</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../ui_kits/tradeify-fx/components.css">
+<style>
+body{margin:0;padding:28px;background:var(--tfx-bg-page);color:var(--tfx-text-primary);font:var(--text-s-regular)}
+.h{font:var(--text-labels-overline);text-transform:uppercase;color:var(--tfx-text-muted);margin:0 0 14px;letter-spacing:.04em}
+.row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.col{display:flex;flex-direction:column;gap:16px}
+.stack{display:flex;flex-direction:column;gap:28px}
+.meta{font:var(--text-labels-meta);color:var(--tfx-text-muted)}
+.cap{font:var(--text-xs-regular);color:var(--tfx-text-secondary)}
+code{font:var(--text-labels-meta);color:var(--color-cyan-300)}
+.fx{display:flex;flex-direction:column;gap:6px;width:170px}.bx{height:100px;border-radius:16px}.fx b{font:var(--text-xs-semibold)}</style></head>
+<body class="tfx">
+<p class="h">Elevation is light, not shadow: glows, hairlines and glass</p>
+<div class="row" style="gap:28px">
+<div class="fx"><div class="bx" style="box-shadow:var(--tfx-glow-primary);background:var(--tfx-primary-face)"></div><b>Primary glow</b><code>--tfx-glow-primary</code></div>
+<div class="fx"><div class="bx" style="background:var(--tfx-bg-surface);box-shadow:var(--tfx-inner-glow-card),inset 0 0 0 1px rgba(0,223,255,.5)"></div><b>CTA card inner glow</b><code>--tfx-inner-glow-card</code></div>
+<div class="fx"><div class="bx" style="background:var(--tfx-bg-surface-subtle);border:1px solid var(--tfx-border-subtle)"></div><b>Card hairline</b><code>--tfx-border-subtle</code></div>
+<div class="fx"><div class="bx" style="background:var(--tfx-bg-page);box-shadow:0 0 0 1px var(--tfx-accent),0 0 24px rgba(0,223,255,.15)"></div><b>Highlighted card</b><code>popular price card</code></div>
+<div class="fx"><div class="bx" style="display:grid;place-items:center;background:linear-gradient(135deg,var(--color-brand-arctic),var(--color-brand-black))"><span class="tfx-glass"><strong>$100,000</strong><span>Account Size</span></span></div><b>Glass mini-card</b><code>.tfx-glass</code></div>
+</div>
+
+</body></html>
